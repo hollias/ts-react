@@ -12,24 +12,24 @@ const GuGuDan = () => {
   const onSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const input = inputEl.current;
-    if(parseInt(value) === first * second){
+    if (parseInt(value) === first * second) {
       setResult('정답');
       setFirst(Math.ceil(Math.random() * 9));
       setSecond(Math.ceil(Math.random() * 9));
       setValue('');
-      if(input){
+      if (input) {
         input.focus();
       }
     } else {
       setResult('땡');
       setValue('');
-      if(input){
+      if (input) {
         input.focus();
       }
     }
   }
 
-  const onChangeValue = (e:React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value);
+  const onChangeValue = (e: React.ChangeEvent<HTMLInputElement>) => setValue(e.target.value);
 
   return (
     <>
